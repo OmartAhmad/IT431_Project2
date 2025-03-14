@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  color: #0ff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #0ff;
+  text-decoration: none;
+  transition: 0.9s ease-in-out;
+}
+
+a:hover {
+  color: #ff0;
+  text-shadow: 0 0 9px #ff0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: rgba(29, 28, 28, 0.9);
+  box-shadow: 0 0 20px #0ff;
+}
+
+button {
+  background: linear-gradient(50deg, #0ff, #00f);
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  margin-left: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.9s ease-in-out;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgb(143, 253, 253), 0 0 10px rgb(21, 21, 255);
+}
+
+button:hover {
+  background: linear-gradient(50deg, #ff0, #f00);
+  box-shadow: 0 0 5px rgb(247, 247, 80), 0 0 15px rgb(160, 1, 1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(0, 0, 0, 0.877);
+  border: 2px solid #0ff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 5px #0ff, 0 0 10px #00f;
+}
+
+li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff0, 0 0 20px #f00;
+}
+
+form {
+  background: rgba(30, 30, 30, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff;
+}
+
+input {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 2px solid #0ff;
+  background: #8b8b8b;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgb(255, 217, 0);
+}
+
+h1,
+h2 {
+  text-shadow: 0 0 8px #0ff, 0 0 12px #00f;
+}
+
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 5px #0ff, 0 0 10px #00f;
+  }
+  50% {
+    text-shadow: 0 0 10px #ff0, 0 0 20px #f00;
+  }
+  100% {
+    text-shadow: 0 0 5px #0ff, 0 0 10px #00f;
+  }
+}
+
+.neon-text {
+  animation: neon-glow 2s infinite alternate;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(45deg, rgb(245, 245, 57), rgb(253, 33, 33));
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #ff0, 0 0 10px #f00;
+  transition: 0.9s ease-in-out;
+}
+
+.back-button:hover {
+  background: linear-gradient(45deg, rgb(15, 192, 192), rgb(8, 8, 182));
+  box-shadow: 0 0 5px rgb(16, 248, 248), 0 0 15px rgb(21, 21, 235);
+}
