@@ -22,7 +22,7 @@ const Login = () => {
     if (res.ok) {
       localStorage.setItem("token", data.token);
       alert("Login successful!");
-      navigate("/"); // redirect to home
+      navigate("/");
     } else {
       alert(data.message || "Login failed");
     }

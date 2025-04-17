@@ -9,7 +9,6 @@ const ProductItem = ({ product, onDelete, isLoggedIn }) => {
       <strong className="neon-text">{product.name}</strong> - ${product.price} -{" "}
       {product.category}
       <p>{product.description}</p>
-      {/* Only show buttons if user is logged in */}
       {isLoggedIn && (
         <>
           <button onClick={() => navigate(`/edit/${product._id}`)}>
