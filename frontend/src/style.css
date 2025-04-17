@@ -133,3 +133,45 @@ h2 {
   background: linear-gradient(45deg, rgb(15, 192, 192), rgb(8, 8, 182));
   box-shadow: 0 0 5px rgb(16, 248, 248), 0 0 15px rgb(21, 21, 235);
 }
+
+.neon-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  background-color: #111;
+  border-bottom: 2px solid #0ff;
+  box-shadow: 0 0 10px #0ff;
+}
+
+.neon-navbar a {
+  text-decoration: none;
+  color: #0ff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.neon-navbar a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+.neon-navbar button {
+  background-color: #00f;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-family: "Orbitron", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0ff;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.neon-navbar button:hover {
+  transform: scale(1.05);
+  background-color: #0080ff;
+}

@@ -1,15 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const ProductItem = ({ product, onDelete }) => {
+const ProductItem = ({ product, onDelete, isLoggedIn }) => {
+  const navigate = useNavigate();
+
   return (
-    <li>
+    <li style={{ marginBottom: "20px" }}>
       <strong className="neon-text">{product.name}</strong> - ${product.price} -{" "}
-      {product.category} - <p>{product.description}</p>
-      <Link to={`/edit/${product.id}`}>
-        <button>Edit Product</button>
-      </Link>
-      <button onClick={() => onDelete(product.id)}>Delete Product</button>
+      {product.category}
+      <p>{product.description}</p>
+      {/* Only show buttons if user is logged in */}
+      {isLoggedIn && (
+        <>
+          <button onClick={() => navigate(`/edit/${product._id}`)}>
+            Edit Product
+          </button>
+          <button onClick={() => onDelete(product._id)}>Delete Product</button>
+        </>
+      )}
     </li>
   );
 };

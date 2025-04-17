@@ -6,6 +6,7 @@ import ProductItem from "../components/ProductItem";
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
+  const isLoggedIn = !!localStorage.getItem("token");
 
   useEffect(() => {
     fetchProducts();
@@ -28,15 +29,18 @@ const ProductList = () => {
       </button>
 
       <h2 className="neon-text">Product List</h2>
-      <Link to="/add">
-        <button>Add a Product</button>
-      </Link>
+      {isLoggedIn && (
+        <Link to="/add">
+          <button>Add a Product</button>
+        </Link>
+      )}
       <ul>
         {products.map((product) => (
           <ProductItem
             key={product.id}
             product={product}
             onDelete={handleDelete}
+            isLoggedIn={isLoggedIn}
           />
         ))}
       </ul>
